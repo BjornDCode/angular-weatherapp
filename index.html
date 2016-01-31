@@ -1,0 +1,32 @@
+<html ng-app="firstApp">
+  <head>
+    <title>Angular Test App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-resource.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body ng-controller="firstCtrl">
+    <main>
+
+      <label for="filter">Filter:</label>
+      <input ng-model="query" type="text" id="filter">
+
+      <table>
+        <thead>
+          <tr>
+            <th ng-click="sortMode = 'name'; reverseSort = !reverseSort">City</th>
+            <th ng-click="sortMode = 'main.temp'; reverseSort = !reverseSort">Temperature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="city in data | filter:query | orderBy:sortMode:reverseSort">
+            <td>{{ city.name }}</td>
+            <td>{{ city.main.temp }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  color: #333;
+}
+
+main {
+  width: 500px;
+  margin: 50px auto;
+}
+
+#filter {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(even) td {
+  background-color: #F2F2F2;
+}
+
+th {
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+td {
+  background-color: white;
+  padding: 5px;
+
+}
